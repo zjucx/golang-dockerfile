@@ -11,3 +11,8 @@ RUN apt-get update
 RUN apt-get -y install git
 # install golang
 RUN apt-get -y install golang
+#install redis
+RUN wget http://download.redis.io/redis-stable.tar.gz
+RUN tar xzf redis-stable.tar.gz
+RUN cd redis-stable
+RUN make
